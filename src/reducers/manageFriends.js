@@ -1,12 +1,12 @@
-export function manageFriends(state, action){
-}
 
-const manageFrinds = (state, action) => {
+
+export function manageFriends(state, action){
   switch (action.type) {
     case 'ADD_FRIEND':
       return { friends: [...state.friends, action.friend]}
-    case 'REMOVE_FREIND':
-        return {friends: (state.friends.filter(curFriend => curFriend !== action.friend))}
+    case 'REMOVE_FRIEND':
+        let friendsLeft = state.friends.filter(curFriend => curFriend.id !== action.id )
+        return {friends: friendsLeft}
     default:
       return state
 

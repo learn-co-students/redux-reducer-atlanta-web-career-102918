@@ -1,9 +1,8 @@
-export function managePresents(state, action){
-}
 
-const managePresents = (state, action) {
+
+export function managePresents(state = [], action){
   switch (action.type) {
-    case INCREASE:
+    case 'INCREASE':
       return { numberOfPresents: state.numberOfPresents + 1}
       break;
     default:
@@ -11,3 +10,5 @@ const managePresents = (state, action) {
   }
 
 }
+
+
